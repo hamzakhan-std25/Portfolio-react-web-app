@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "icon": "bi-code-slash",
+    "title": "Front-End Development",
+    "description": "Creating responsive and interactive user interfaces using React, Bootstrap, and modern web technologies."
+  },
+  {
+    "id": 2,
+    "icon": "bi-phone",
+    "title": "Mobile-Responsive Design",
+    "description": "Ensuring websites look and perform well across all devices, including phones and tablets."
+  },
+  {
+    "id": 3,
+    "icon": "bi-laptop",
+    "title": "Portfolio & Business Sites",
+    "description": "Building stunning portfolio, business, or landing pages to showcase your services or personal brand."
+  },
+   {
+    "id": 4,
+    "icon": "bi-gear",
+    "title": "Web App Integration",
+    "description": "Adding dynamic features such as forms, Firebase, API integration, and CMS functionality."
+  },
+  {
+    "id": 5,
+    "icon": "bi-globe",
+    "title": "Landing Pages & Portfolios",
+    "description": "Building professional landing pages and portfolios optimized for performance and clarity."
+  },
+  {
+    "id": 6,
+    "icon": "bi-lightning-charge",
+    "title": "Performance Optimization",
+    "description": "Improving load speed, responsiveness, and accessibility for better user satisfaction."
+  }
+
+]

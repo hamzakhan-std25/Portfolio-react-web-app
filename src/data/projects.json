@@ -1,0 +1,64 @@
+
+[
+  {
+    "id": 1,
+    "title": "Portfolio Website",
+    "description": "A personal portfolio built with React and Bootstrap.",
+    "image": "/images/portfolio.jpg",
+    "liveLink": "https://hamza-portfolio.vercel.app",
+    "github": "https://github.com/hamzakhan/portfolio"
+  },
+  {
+    "id": 2,
+    "title": "E-commerce Store",
+    "description": "An online store with cart functionality and admin panel.",
+    "image": "/images/ecommerce.jpg",
+    "liveLink": "https://mystore.vercel.app",
+    "github": "https://github.com/hamzakhan/ecommerce"
+  },
+  {
+    "id": 3,
+    "title": "Weather App",
+    "description": "A weather forecasting app using OpenWeather API.",
+    "image": "/images/weather.jpg",
+    "liveLink": "https://weatherapp.vercel.app",
+    "github": "https://github.com/hamzakhan/weather-app"
+  }
+  ,
+  {
+    "id": 4,
+    "title": "AI Chatbot Interface",
+    "description": "A React-based chatbot UI connected to a mock AI backend. Supports real-time responses, dark/light mode, and multi-device chat sync using Firebase.",
+    "image": "/images/projects/chatbot.png",
+    "tech": ["React", "Firebase", "Bootstrap", "Context API"],
+    "liveLink": "https://ai-chatbot-portfolio.web.app",
+    "github": "https://github.com/yourusername/ai-chatbot"
+  },
+  {
+    "id": 5,
+    "title": "Weather Forecast App",
+    "description": "A responsive weather app fetching live data from OpenWeatherMap API. Features location search, 5-day forecast, temperature units toggle, and dynamic weather backgrounds.",
+    "image": "/images/projects/weather.png",
+    "tech": ["React", "Bootstrap", "REST API"],
+    "liveLink": "https://myweatherapp.vercel.app",
+    "github": "https://github.com/yourusername/weather-forecast"
+  },
+  {
+    "id": 6,
+    "title": "Student Management Panel",
+    "description": "A full-stack dashboard for managing student records, attendance, results, and course tracking. Includes admin login and Google Sheets integration.",
+    "image": "/images/projects/student-panel.png",
+    "tech": ["React", "Bootstrap", "Google Sheets API", "Firebase"],
+    "liveLink": "https://student-management.vercel.app",
+    "github": "https://github.com/yourusername/student-panel"
+  },
+  {
+    "id": 7,
+    "title": "Minimal Portfolio Template",
+    "description": "A fully responsive personal portfolio built with React and Bootstrap. Includes CMS-ready JSON structure for easy updates to content, services, and testimonials.",
+    "image": "/images/projects/portfolio-template.png",
+    "tech": ["React", "Bootstrap", "Firebase", "JSON"],
+    "liveLink": "https://minimal-portfolio.netlify.app",
+    "github": "https://github.com/yourusername/minimal-portfolio"
+  }
+]
