@@ -1,11 +1,14 @@
 import React from 'react';
-
+import { useDarkMode } from "./DarkModeContext";
 const AboutPage = () => {
 
-  let isDarkMode= true;
-  return (
-    <div className={isDarkMode ? 'p-5 container bg-dark text-white' : 'p-5 container bg-light text-dark'}>
-      <h2 className="text-center fw-bold mb-4">About Me</h2>
+   const { darkMode} = useDarkMode();
+
+  return (   
+    //  ${darkMode ? 'bg-secondary text-white' : 'bg-info text-dark'}`
+          //  darkMode ? 'p-5 container bg-dark text-white' : 'p-5 container bg-light text-dark'
+    <div className={`  ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
+      <h2 className=" p-5 text-center fw-bold mb-4">About Me</h2>
 
       {/* Intro */}
       <p className="lead text-center mb-4">
@@ -23,7 +26,8 @@ const AboutPage = () => {
       </div>
 
       {/* Skills & Education */}
-      <div className="row mb-5">
+      <div className={` p-5 row mb-5 py-5 ${darkMode ? "text-white": "text-dark"}  bg-gradient text-center`}
+      >
         <div className="col-md-6">
           <h4 className="fw-semibold">Skills</h4>
           <ul className="list-unstyled">
@@ -43,7 +47,7 @@ const AboutPage = () => {
       </div>
 
       {/* Timeline */}
-      <section className="mb-5">
+      <section className={`mb-5 p-5  ${darkMode ? " " :" bg-info"} `}>
         <h4 className="fw-semibold text-center mb-4">Timeline</h4>
         <ul className="list-unstyled px-3">
           <li className="mb-3">
@@ -74,19 +78,19 @@ const AboutPage = () => {
       </section>
 
       {/* Certifications */}
-      <section className="mb-5">
+      <section className="mb-0 ">
         <h4 className="fw-semibold text-center mb-4">Certifications</h4>
         <div className="row justify-content-center">
-          <div className="col-md-4 mb-3">
-            <div className="card bg-dark text-light shadow">
+          <div className="col-md-4 mb-5">
+            <div className={` card shadow ${darkMode ? "bg-secondary text-white" : "bg-info text-dark"}`}>
               <div className="card-body">
                 <h5 className="card-title">Frontend Development</h5>
                 <p className="card-text">Issued by Coursera – 2024</p>
               </div>
             </div>
           </div>
-          <div className="col-md-4 mb-3">
-            <div className="card bg-dark text-light shadow">
+          <div className="col-md-4 mb-2">
+            <div className={` card shadow ${darkMode ? " bg-secondary text-white" : "bg-info text-dark"}`}>
               <div className="card-body">
                 <h5 className="card-title">React & Firebase</h5>
                 <p className="card-text">Issued by freeCodeCamp – 2025</p>

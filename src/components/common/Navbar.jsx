@@ -1,22 +1,22 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useDarkMode } from '../../pages/DarkModeContext';
+
+
+
+
 
 function Navbar() {
-      const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-    document.body.classList.toggle("bg-dark", darkMode);
-    document.body.classList.toggle("text-white", darkMode);
-    document.body.classList.toggle("bg-light", !darkMode);
-    document.body.classList.toggle("text-dark", !darkMode);
-  }, [darkMode]);
+    const { darkMode, setDarkMode } = useDarkMode();
 
-
-
+  const handleToggle = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow sticky-top">
-      <div className="container ">
+    <nav className={`navbar navbar-expand-lg shadow sticky-top ${darkMode ? 'bg-dark navbar-dark' : 'bg-light navbar-light'}`}>
+      <div className="container">
         <NavLink to="/" className="navbar-brand fw-bold text-primary">
           Hamza's Portfolio
         </NavLink>
@@ -34,9 +34,9 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto gap-2 ">
+          <ul className="navbar-nav ms-auto gap-2">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link" >Home</NavLink>
+              <NavLink to="/" className="nav-link">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/about" className="nav-link">About</NavLink>
@@ -51,14 +51,19 @@ function Navbar() {
               <NavLink to="/contact" className="nav-link">Contact</NavLink>
             </li>
           </ul>
-                    {/* Dark Mode Toggle */}
-          <div className="form-check form-switch text-dark align-center">
+
+          {/* Dark Mode Toggle */}
+          <div className={`form-check form-switch ms-4 ${darkMode ? 'text-white' : 'text-dark'}`}>
             <input
-              className="form-check-input mx-4"
+              className="form-check-input"
               type="checkbox"
               id="darkModeSwitch"
               checked={darkMode}
-              onChange={() => setDarkMode(!darkMode)}
+              onChange={() => {
+                setDarkMode(!darkMode);
+                console.log('dark mode change = ', darkMode)
+              }
+              }
             />
             <label className="form-check-label" htmlFor="darkModeSwitch">
               Dark Mode

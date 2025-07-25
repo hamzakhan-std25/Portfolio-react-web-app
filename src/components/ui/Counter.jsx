@@ -6,7 +6,7 @@ export default function Counter({ end, label }) {
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div ref={ref} className="text-center p-4">
+    <div ref={ref} className="text-center p-4 ">
       <h2 className="text-4xl font-bold text-blue-600">
         {inView ? <CountUp end={end} duration={2} /> : 0}
       </h2>

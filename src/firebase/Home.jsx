@@ -2,16 +2,12 @@
 import testimonials from "../data/testimonials.json";
 import Counter from "../components/ui/Counter";
 import projects from "../data/projects.json"
-
-import { useDarkMode } from "./DarkModeContext";
-
 export default function Home() {
 
-     const { darkMode} = useDarkMode();
-     
-     return (
-    // {darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}
-    <div className={`p-3 ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
+  let isDarkMode=true;
+
+  return (
+    <div className={isDarkMode ? 'bg-dark text-white' : 'bg-light text-dark'}>
       <section className="text-center py-5 px-3 bg-gradient  dark-mode-section">
         <div className="container">
           <h1 className="display-4 fw-bold mb-3">Hi, I'm Hamza</h1>
@@ -20,7 +16,7 @@ export default function Home() {
           </p>
           <a
             href="/projects"
-            className="btn btn-primary px-4 py-2 rounded-pill text-white fw-semibold"
+            className="btn btn-dark px-4 py-2 rounded-pill text-white fw-semibold"
           >
             View My Work
           </a>
@@ -50,8 +46,8 @@ export default function Home() {
           <h2 className="h4 fw-semibold text-center mb-5">Featured Projects</h2>
           <div className="row g-4">
             {projects.slice(0, 3).map((proj) => (
-              <div key={proj.id} className="  col-md-4">
-                <div className={` card h-100 shadow-sm  ${darkMode ? 'bg-secondary text-white' : 'bg-info text-dark'}`}>
+              <div key={proj.id} className="col-md-4">
+                <div className="card h-100 shadow border-0 project-card bg-dark">
                   <img
                     src={proj.image}
                     alt={proj.title}
@@ -79,7 +75,7 @@ export default function Home() {
     <div className="row justify-content-center g-4">
       {testimonials.slice(0, 2).map((t) => (
         <div key={t.id} className="col-md-6">
-          <div className={` p-4 shadow rounded testimonial-card h-100 dark-card  ${darkMode ? 'bg-secondary text-white' : 'bg-info text-dark'}`}>
+          <div className=" border border-2 p-4 rounded shadow testimonial-card h-100 dark-card bg-dark ">
             <p className="fst-italic mb-3">“{t.feedback}”</p>
             <div className="d-flex align-items-center gap-3">
               <img

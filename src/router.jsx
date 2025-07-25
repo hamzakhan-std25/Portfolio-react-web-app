@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,5 +23,8 @@ const router = createBrowserRouter([
 ]);
 
 export default function PortfolioRouter() {
-  return <RouterProvider router={router} />;
+  
+
+  return <RouterProvider router={router} />
 }
+

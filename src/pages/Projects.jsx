@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import projectsData from '../data/projects.json';
 import { Modal, Button } from 'react-bootstrap';
 
+import { useDarkMode } from "./DarkModeContext";
+
 export default function Projects() {
+
+  
+     const { darkMode} = useDarkMode();
   const [projects] = useState(projectsData);
 
   const [selectedProject, setSelectedProject] = useState(null);
@@ -21,24 +26,25 @@ export default function Projects() {
 let isDarkMode= true;
 
   return (
-    <main className={ isDarkMode ? "p-5 bg-dark text-light" : "p-5 bg-light text-dark" }>
+    // { isDarkMode ? "p-5 bg-dark text-light" : "p-5 bg-light text-dark" }
+    <main className={`p-5  ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
       <div className="container">
 
         {/* 1. Intro */}
-        <section className="text-center mb-5">
+        <section className="text-center mb-5 ">
           <h1 className="display-5 fw-bold">Projects Portfolio</h1>
           <p className="lead">Explore a selection of projects I've built using modern technologies including React, Bootstrap, APIs, and more.</p>
-        </section>
+        </section>  
 
         {/* 2. Featured Projects */}
         <section className="mb-5">
           <h2 className="text-center mb-4">✨ Featured Projects</h2>
           <div className="row">
             {projects.slice(0, 2).map((project) => (
-              <div className="col-md-6 mb-4" key={project.id}>
-                <div className="card bg-dark text-light shadow-lg border border-2 p-2">
+              <div className="col-md-6 mb-4 " key={project.id}>
+                <div className={`card  shadow-lg p-2 ${darkMode? " bg-secondary text-light":"bg-info text-dark"}`}>
                   <img src={project.image} className="card-img-top" alt={project.title} />
-                  <div className="card-body">
+                  <div className="card-body ">
                     <h5 className="card-title">{project.title}</h5>
                     <p className="card-text">{project.description}</p>
                     <div className="mb-2">
@@ -60,7 +66,7 @@ let isDarkMode= true;
         <div className="row">
           {projects.map((project) => (
                <div className="col-md-6 mb-4 " key={project.id}>
-                <div className="card shadow-lg bg-dark text-light border border-2 p-2"  onClick={() => handleOpen(project)} style={{ cursor: 'pointer' }}>
+                <div className={`card  shadow-lg p-2 ${darkMode? " bg-secondary text-light":"bg-info text-dark"}`}  onClick={() => handleOpen(project)} style={{ cursor: 'pointer' }}>
                   <img src={project.image} className="card-img-top" alt={project.title} />
                   <div className="card-body">
                     <h5 className="card-title">{project.title}</h5>
@@ -109,7 +115,7 @@ let isDarkMode= true;
         </Modal>
 
         {/* 4. Call to Action */}
-        <section className="text-center">
+        <section className={`text-center py-4 ${darkMode? " bg-gradient text-light":"bg-light text-dark"}`}>
           <h3 className="mb-3">Interested in working with me?</h3>
           <a href="/contact" className="btn btn-lg btn-success">Let’s Get in Touch</a>
         </section>

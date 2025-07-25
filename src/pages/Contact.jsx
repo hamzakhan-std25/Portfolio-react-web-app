@@ -1,13 +1,16 @@
 import React from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { useDarkMode } from "./DarkModeContext";
 
 const Contact = () => {
-  let isDarkMode =true;
+  
+   const { darkMode} = useDarkMode();
 
   return (
 
+    // darkMode ? "p-5 px-3 bg-dark text-light dark-mode" : "p-5 px-3 bg-light text-dark"
 
-    <section className={ isDarkMode ? "p-5 px-3 bg-dark text-light dark-mode" : "p-5 px-3 bg-light text-dark" }>
+    <section className={`p-5 px-3 ${darkMode ? "bg-secondary text-white dark-mode" : "bg-light text-dark"}`}    data-bs-theme={darkMode ? 'dark' : ''}  >
       <div className="container">
         <h2 className="text-center mb-4">Contact Me</h2>
 
@@ -33,8 +36,9 @@ const Contact = () => {
                 className="w-100 rounded"
                 height="200"
                 loading="lazy"
-                src="https://maps.google.com/maps?q=wah%20cantt&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26420.791663158045!2d72.43500686400733!3d34.13101538011453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38deef747aaa83bb%3A0x2b89195da1793f3b!2sSwabi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1753445039196!5m2!1sen!2s"
               ></iframe>
+
             </div>
           </div>
 
