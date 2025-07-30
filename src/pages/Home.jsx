@@ -2,6 +2,7 @@
 import testimonials from "../data/testimonials.json";
 import Counter from "../components/ui/Counter";
 import projects from "../data/projects.json"
+import '../styles/global.css'
 
 import { useDarkMode } from "./DarkModeContext";
 
@@ -11,7 +12,7 @@ export default function Home() {
      
      return (
     // {darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}
-    <div className={`p-3 ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
+    <div className={`p-3 ${darkMode ? " text-white" : " text-dark"}`}>
       <section className="text-center py-5 px-3 bg-gradient  dark-mode-section">
         <div className="container">
           <h1 className="display-4 fw-bold mb-3">Hi, I'm Hamza</h1>
@@ -28,7 +29,7 @@ export default function Home() {
       </section>
 
       {/* === Counters Section === */}
-      <section className="py-5  dark-section text-center">
+      <section className="py-5  layer-black text-center">
         <div className="container">
           <div className="row g-4">
             <div className="col-12 col-sm-4">

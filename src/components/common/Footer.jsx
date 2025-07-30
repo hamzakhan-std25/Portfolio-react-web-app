@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
 
-    <footer className={`${ darkMode ? "bg-secondary":"" } text-dark pt-4 border-top`}>
+    <footer className={`${ darkMode ? "":"" }  pt-4 border-top`}>
       <div className="container text-center text-md-start">
         <div className="row py-4">
 

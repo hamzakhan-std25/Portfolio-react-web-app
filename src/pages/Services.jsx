@@ -10,7 +10,7 @@ const Services = () => {
      const { darkMode} = useDarkMode();
 
   return (
-    <div className={`${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
+    <div className={`${darkMode ? " text-white" : "text-dark"}`}>
       {/* Section Intro */}
       <section className="py-5 text-center bg-gradient  dark-mode-section">
         <div className="container">

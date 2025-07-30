@@ -1,6 +1,8 @@
 import React from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { useDarkMode } from "./DarkModeContext";
+// import '../styles/global.css'
+
 
 const Contact = () => {
   
@@ -10,7 +12,7 @@ const Contact = () => {
 
     // darkMode ? "p-5 px-3 bg-dark text-light dark-mode" : "p-5 px-3 bg-light text-dark"
 
-    <section className={`p-5 px-3 ${darkMode ? "bg-secondary text-white dark-mode" : "bg-light text-dark"}`}    data-bs-theme={darkMode ? 'dark' : ''}  >
+    <section className={`p-5 px-3 ${darkMode ? "text-white drk-nav" : "text-dark lgt-nav"}`}    data-bs-theme={darkMode ? 'dark' : ''}  >
       <div className="container">
         <h2 className="text-center mb-4">Contact Me</h2>
 

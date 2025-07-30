@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg shadow sticky-top ${darkMode ? 'bg-dark navbar-dark' : 'bg-light navbar-light'}`}>
+    <nav className={`navbar navbar-expand-lg shadow sticky-top m-3  ${darkMode ? ' drk-nav' : ' navbar-light lgt-nav'}`}>
       <div className="container">
         <NavLink to="/" className="navbar-brand fw-bold text-primary">
           Hamza's Portfolio
@@ -53,7 +53,7 @@ function Navbar() {
           </ul>
 
           {/* Dark Mode Toggle */}
-          <div className={`form-check form-switch ms-4 ${darkMode ? 'text-white' : 'text-dark'}`}>
+          <div className={`form-check form-switch ms-4 ${darkMode ? '' : 'text-dark'}`}>
             <input
               className="form-check-input"
               type="checkbox"

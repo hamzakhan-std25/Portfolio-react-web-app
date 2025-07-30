@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (   
     //  ${darkMode ? 'bg-secondary text-white' : 'bg-info text-dark'}`
           //  darkMode ? 'p-5 container bg-dark text-white' : 'p-5 container bg-light text-dark'
-    <div className={`  ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
+    <div className={`  ${darkMode ? " text-white" : " text-dark"}`}>
       <h2 className=" p-5 text-center fw-bold mb-4">About Me</h2>
 
       {/* Intro */}

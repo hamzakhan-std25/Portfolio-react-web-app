@@ -36,3 +36,23 @@ body.dark-mode .form-check-label {
   color: #fff;
   border-color: #444;
 }
+
+
+/* styling navbar ----  */
+.drk-nav{
+}
+
+.lgt-nav{
+}
+
+.drk-nav, .lgt-nav{
+  margin: 0 50px ; 
+  border: 2px solid salmon;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.layer-black{
+  background: rgb(225, 225, 225,0.5);
+  border-radius: 20px;
+}

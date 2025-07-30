@@ -27,7 +27,7 @@ let isDarkMode= true;
 
   return (
     // { isDarkMode ? "p-5 bg-dark text-light" : "p-5 bg-light text-dark" }
-    <main className={`p-5  ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
+    <main className={`p-5  ${darkMode ? " text-white" : " text-dark"}`}>
       <div className="container">
 
         {/* 1. Intro */}
